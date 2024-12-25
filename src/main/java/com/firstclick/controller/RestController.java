@@ -51,4 +51,9 @@ public class RestController {
         log.trace("API request on /clear");
         return processor.getResponse(request);
     }
+
+    @GetMapping("/getAddress")
+    public String getAddress(){
+        return processor.getLocalIpAddress();
+    }
 }

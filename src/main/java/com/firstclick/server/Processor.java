@@ -28,16 +28,17 @@ public class Processor {
     private static final int CODE_SUCCESS = 100;
     private static final int BAD_REQUEST_STATUS = 108;
     private static final int BAD_REQUEST_NAME = 102;
+    @Getter
     private final String localIpAddress;
 
     public Processor(Memory memory, Generator generator) {
         this.memory = memory;
         this.generator = generator;
-        localIpAddress = getLocalIpAddress();
+        localIpAddress = setLocalIpAddress();
         log.info(localIpAddress);
     }
 
-    private String getLocalIpAddress() {
+    private String setLocalIpAddress() {
         String ip = "";
         try {
             Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
@@ -59,7 +60,7 @@ public class Processor {
         } catch (SocketException e) {
             throw new RuntimeException(e);
         }
-        return ip;
+        return ip+":8080";
     }
 
 
