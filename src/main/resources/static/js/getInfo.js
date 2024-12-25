@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dynamicTextElement = document.getElementById('dynamic-text');
 
     function fetchTextFromServer() {
-        fetch('/firstClick/getInfo') // Замените на ваш URL
+        fetch('/firstClick/whosFirst') // Замените на ваш URL
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);

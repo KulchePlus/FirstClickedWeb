@@ -1,15 +1,9 @@
 package com.firstclick.controller;
 
-import com.firstclick.config.SpringConfig;
-import com.firstclick.model.ClickRequest;
-import com.firstclick.model.ClickResponse;
-import com.firstclick.server.Processor;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
-public class TestController {
+@org.springframework.stereotype.Controller
+public class Controller {
 
     @GetMapping("/")
     public String index() {

@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css" th:href="@{/css/styles.css}"/>
+    <title>Admin Page</title>
 </head>
 <body>
-$END$
+<div>
+    <h1>Админская страничка</h1>
+</div>
+<div id="text-container">
+    <h1 id="dynamic-text">Loading...</h1>
+</div>
+<div>
+    <div class="button-container">
+        <button id="clearButton">Сброс</button>
+        <button id="blockButton">Блок кнопок</button>
+        <button id="unblockButton">Разблок кнопок</button>
+    </div>
+</div>
+
+<script src="/js/getInfo.js"></script>
+<script src="/js/clearAction.js"></script>
 </body>
 </html>
